@@ -27,8 +27,12 @@ int main() {
 
     sift::Sift(   image, "KeyPoints/", "Descriptors/",
             areas,
-            500, 4, 1.6, 0.03, 10,  
+            0, 4, 1.6, 0.03, 10,  
             100);
+
+    /*surf::Surf( image, "KeyPoints/", "Descriptors/",
+                areas,
+                400);*/
     //cout<< add(5, 6) <<endl;
     //cout<< add(5, 6, 2) <<endl;
 

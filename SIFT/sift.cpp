@@ -3,6 +3,7 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/xfeatures2d.hpp>
 #include <opencv2/features2d.hpp>
+#include "sift.hpp"
 
 using namespace std;
 using namespace cv;
@@ -16,7 +17,7 @@ namespace sift {
 
     void Sift(  Mat input_image, string path_Key_Point, string path_Descriptors,
             vector<vector<int> > areas,
-            int nFeatures /*= 500*/, int nOctaveLayers /*= 3*/, double sigma /*= 1.6*/, double constrastThreshold /*= 0.04*/, double edgeThreshold /*= 10*/,   
+            int nFeatures /*= 0*/, int nOctaveLayers /*= 3*/, double sigma /*= 1.6*/, double constrastThreshold /*= 0.04*/, double edgeThreshold /*= 10*/,   
             int n_keypoint_confident /*= 100*/) {
 
         Mat input_image_gray;

@@ -12,7 +12,7 @@ namespace surf {
 
     void Surf(  Mat input_image, string path_Key_Point, string path_Descriptors,
             vector<vector<int> > areas,
-            int minHessian = 100, int nOctave = 4, int nScale = 3, 
+            int minHessian = 100, int nScale = 4, int nOctaveLayers = 3, 
             int n_keypoint_confident = 100) ;
 
 }

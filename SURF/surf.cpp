@@ -16,14 +16,13 @@ namespace surf {
 
     void Surf(  Mat input_image, string path_Key_Point, string path_Descriptors,
                 vector<vector<int> > areas,
-                int minHessian /*= 100*/, int nOctave /*= 4*/, int nScale /*= 3*/, 
+                int minHessian /*= 100*/, int nScale /*= 4*/, int nOctaveLayers /*= 3*/, 
                 int n_keypoint_confident /*= 100*/) {
 
-        //return;
         Mat input_image_gray;
         cvtColor(input_image, input_image_gray, CV_BGR2GRAY);
 
-        Ptr<SURF> detector = SURF::create(minHessian, nOctave, nScale);
+        Ptr<SURF> detector = SURF::create(minHessian, nScale, nOctaveLayers);
         cout<< input_image.size() <<endl;
 
         for(int i = 0, areas_size = areas.size(); i < areas_size; ++i) {
